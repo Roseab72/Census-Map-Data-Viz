@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<!--prevent the automatic favicon request-->
+	<link rel="icon" href="data:,">
+	
+	<!--Edit index.html to change the title.-->
+	<title>Census DataViz</title>
+
+	<!--p5/ folder should be at same level as folder containing this html-->
+	<script type="text/javascript" src="p5/p5.js"></script>
+
+	<!--your script *.js files should be in same folder as this html-->
+	<script type="text/javascript" src="sketch.js"></script>
+	<script type="text/javascript" src="County.js"></script>
+
+	<style>
+		body {
+			width: 100vw;
+			height: 100vh;
+			padding: 0;
+			margin: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<!--Add HTML content here if you wish. It will appear above your sketch-->
+	<div id="controls"> </div>
+	<p>Click markers to toggle stats of each county!</p>
+</body>
+
+</html>

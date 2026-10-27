@@ -1,0 +1,110 @@
+*** Data Dictionary for county Census & Health data ***
+ 
+*** Compiled by WM Harris for IGME-102 P2: Data Visualization
+
+SOURCES:
+* 2009-2024 Census American Community Survey (5-year) for NY (36) & PA (42) counties
+* 2025 Gazetteer census tract data for NY (36) & PA (42) counties
+* 2022-2023 CDC PLACES Project for NY (36) & PA (42) counties
+
+JSON OBJECT PROPERTIES *************************** 
+
+	["name"]		County (county + state) name
+	["county"] 		County ID
+	["state"] 		State ID
+	["pop"]			Total county population 
+	["popImmig"]	Population: Not a U.S. citizen 
+	["popWhite"]	Population: White, non-Hispanic/Latino
+	["popPov"]		Population: Income below poverty level
+	["popAssist"]	Population: Receive cash or Food Stamps/SNAP public assistance
+	["gini"]		GINI index of income inequality (bigger is worse, max 1)
+	["medInc"]		Median household income $
+	["disabled"]	Collection of work-aged disability data:
+		"19-64":				Total work-aged population (19-64)
+		"19-64 disabled":		Work-aged with disability
+		"19-64 not disabled":	Work-aged with no disability
+		"earnings disabled":	Median earnings for work-aged with disability $ (civilian, non-institutionalized)
+	["commute"]		Collection of commuting data:
+		"total workers":	Total 16+ workers
+		"drive solo":		Workers: drive alone commute
+		"carpool":			Workers: carpool commute
+		"public transit":	Workers: public transit commute
+		"walk":				Workers: walk commute
+		"other":			Workers: other commute
+		"at home":			Workers: work from home
+	["homeVal"]		Median value of housing $
+	["hCounts"]		Array of housing unit data:
+			0:	   	Total occupied housing units
+			1:		Units occupied by owner
+			2:		Units occupied by renter
+			3:		Units occupied & lacking complete plumbing
+			4:		Units occupied & lacking complete kitchen
+	["hExpense"]	Collection of housing expenses:
+			"rent":			Median gross rent $
+			"montly costs":	Median monthly housing costs $
+    ["lon"]			County longitude (more positive = more East)
+					range: -80.349492 to -72.842861
+    ["lat"]			County latitude (more positive = more North)
+					range: 44.746145 to 39.853804
+
+*** Properties from the CDC Data Source (not all places have all measures)
+	
+	["adults20"]	Total adults in population (2020 census)
+
+    ["outcomes"]	(object of poor Health Outcome measures)
+    	Percent in CDC study population with:
+			"Current asthma among adults"
+			"Diagnosed diabetes among adults"
+			"All teeth lost among adults aged >=65 years"
+			"High cholesterol among adults who have ever been screened"
+			"Coronary heart disease among adults"
+			"Depression among adults"
+			"Stroke among adults"
+			"Cancer (non-skin) or melanoma among adults"
+			"Arthritis among adults"
+			"High blood pressure among adults"
+			"Chronic obstructive pulmonary disease among adults"
+			"Obesity among adults"
+    				 		
+	["preventions"]	(object of  Prevention measures) 
+    	Percent in CDC study population with:
+			"Current lack of health insurance among adults aged 18-64 years"
+			"Visits to doctor for routine checkup within the past year among adults"
+			"Mammography use among women aged 50-74 years"
+			"Colorectal cancer screening among adults aged 45–75 years"
+			"Taking medicine to control high blood pressure among adults with high blood pressure"
+			"Visited dentist or dental clinic in the past year among adults"
+			"Cholesterol screening among adults"
+    	
+	["risks"]		(object of Health Risk Behavior measures)
+    	Percent in CDC study population with: 
+		    "Current cigarette smoking among adults"
+			"Short sleep duration among adults"
+			"Binge drinking among adults"
+			"No leisure-time physical activity among adults"
+
+    ["statuses"]	(object of poor Health Status measures)
+    	Percent in CDC study population with:  
+		    "Fair or poor self-rated health status among adults"
+      		"Frequent physical distress among adults"
+      		"Frequent mental distress among adults"
+
+	["disabilities"]	(object of Disability measures)
+    	Percent in CDC study population with:	
+			"Cognitive disability among adults"
+			"Mobility disability among adults"
+			"Hearing disability among adults"
+			"Any disability among adults"
+			"Self-care disability among adults"
+			"Vision disability among adults"
+			"Independent living disability among adults"
+
+	["socneeds"]	(object of Health-Related Social Needs measures)
+    	Percent in CDC study population with:
+			"Utility services shut-off threat in the past 12 months among adults"
+			"Food insecurity in the past 12 months among adults"
+			"Housing insecurity in the past 12 months among adults"
+			"Loneliness among adults"
+			"Lack of reliable transportation in the past 12 months among adults"
+			"Lack of social and emotional support among adults"
+			"Received food stamps in the past 12 months among adults"
